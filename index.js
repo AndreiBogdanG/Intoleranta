@@ -61,7 +61,7 @@ function endGame(situation) {
   if (lastBubble) lifeContainer.removeChild(lastBubble);
 
   if (situation === "won"){
-    lifeContainer.innerText = `AI CÂȘTIGAT DIN ${currentTry} ÎNCERCĂRI!`
+    lifeContainer.innerText = `AI GHICIT DIN ${currentTry} ÎNCERCĂRI!`
     } else {
     hipopotanta.setAttribute("src","resources/boom.png")
     lifeContainer.innerText="VĂLEU! A POCNIT HIPOPOTANȚA!"
