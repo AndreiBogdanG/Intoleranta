@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Guess the Food</title>
+</head>
+<body>
+    <img id="title" src="resources/Title.png" alt="Game Title">
+
+    <div id="bigContainer">
+        <div id="description"></div>
+
+        <img id="hipopotanta" src="resources/mini_hipo.png" alt="Hungry Hipopotanta">
+
+        <div id="mainContainer" class="mainContainer">
+            <div id="toBeGuessedContainer" class="toBeGuessedContainer">
+                <img class="toBeGuessedDiv" id="toBeGuessed1" alt="First Dish">
+                <img class="toBeGuessedDiv" id="toBeGuessed2" alt="Second Dish">
+                <img class="toBeGuessedDiv" id="toBeGuessed3" alt="Third Dish">
+                <img class="toBeGuessedDiv" id="toBeGuessed4" alt="Fourth Dish">
+            </div>
+
+            <div id="lifeContainer"></div>
+        </div>
+
+        <button class="button-53" id="myButton" onclick="checkResult()">HRĂNEȘTE</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
