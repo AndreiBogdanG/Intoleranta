@@ -10,6 +10,7 @@ const mainContainer = document.getElementById("mainContainer");
 const lifeContainer = document.getElementById("lifeContainer");
 const myButton = document.getElementById("myButton");
 const description = document.getElementById("description");
+const firstDishes = [firstDish, secondDish, thirdDish, fourthDish]
 
 description.innerText = `O, nu! Hipopotanței îi este puțin fomiță.
 Deși în general basculează orice, azi are intoleranță la anumite mâncăruri. 
@@ -38,7 +39,7 @@ function getRandomDishes() {
   }
   chosenFood = numbers.map((index) => mainFood[index]);
 
-  [firstDish, secondDish, thirdDish, fourthDish].forEach((dish) => {
+  firstDishes.forEach((dish) => {
     dish.setAttribute("src", `${RESOURCE_PATH}0.png`);
   });
 
@@ -49,7 +50,7 @@ getRandomDishes();
 function endGame(situation) {
   endedGame = true;
 
-  [firstDish, secondDish, thirdDish, fourthDish].forEach((dish, index) => {
+  firstDishes.forEach((dish, index) => {
     dish.setAttribute("src", `${RESOURCE_PATH}${chosenFood[index]}.png`);
   });
 
@@ -69,6 +70,11 @@ function endGame(situation) {
 }
 
 function createGridElement() {
+
+  for (let i=0; i<4; i++){
+      firstDishes[i].setAttribute("src", `${RESOURCE_PATH}${guessedFood[i]}.png`);
+  };
+  
   if (currentTry > 0) {
     const previousTryRow = document.getElementById(`tryNo${currentTry}`);
     if (previousTryRow) mainContainer.removeChild(previousTryRow);
